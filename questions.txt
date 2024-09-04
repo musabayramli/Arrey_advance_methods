@@ -1,0 +1,81 @@
+ forEach Sualları
+
+ 1) Bütün dəyişənləri ekrana yazdırın
+ Array: [15, 49, "string", 3, 6, 62, "array", 12, 9, -4, "number", 58, 103]
+
+ 2) Bütün sayları toplayın və ekrana yazdırın
+ Array: [15, 49, "string", 3, 6, 62, "array", 12, 9, -4, "number", 58, 103]
+
+ 3) Bütün stringləri tapın, böyük hərfə çevirin və yeni array yaradın
+ Array: [15, 49, "string", 3, 6, 62, "array", 12, 9, -4, "number", 58, 103]
+
+ 4) Bütün müsbət ədədləri tapın və ekrana yazdırın
+ Array: [15, 49, "string", 3, 6, 62, "array", 12, 9, -4, "number", 58, 103]
+
+ 5) Array-i tərsinə çevirin (reverse istifadə etmədən)
+ Array: [15, 49, "string", 3, 6, 62, "array", 12, 9, -4, "number", 58, 103]
+
+ 6) Bütün cüt ədədləri ekrana yazdırın
+ Array: [15, 49, "string", 3, 6, 62, "array", 12, 9, -4, "number", 58, 103]
+
+ 7) Bütün stringlərin uzunluğunu tapın və "string-length" şəklində ekrana yazdırın
+ Array: [15, 49, "string", 3, 6, 62, "array", 12, 9, -4, "number", 58, 103]
+
+ 8) Bütün rəqəmləri iki ilə vurun və ekrana yazdırın
+ Array: [15, 49, "string", 3, 6, 62, "array", 12, 9, -4, "number", 58, 103]
+
+ map Sualları
+
+ 1) Hər bir elementi iki misli olan yeni array yaradın
+ Array: [4, 48, 13, 53, -29, 103]
+
+ 2) Hər bir elementi 100 ilə toplayan yeni array yaradın
+ Array: [4, 48, 13, 53, -29, 103]
+
+ 3) İlk hərfi saxlayan array yaradın
+ Array: ["apple", "banana", "orange", "fexreddin", "niyameddin"]
+
+ 4) Bütün hərfləri böyük edib uzunluq qaytaran array yaradın
+ Array: ["apple", "banana", "orange", "fexreddin", "niyameddin"]
+
+ filter Sualları
+
+ 1) Bütün müsbət ədədləri qaytaran yeni array yaradın
+ Array: [15, 19, 23, 12, 4, 2, 49, 25, 1, -20, 103, -59, 13]
+
+ 2) Bütün mənfi ədədləri qaytaran yeni array yaradın
+ Array: [15, 19, 23, 12, 4, 2, 49, 25, 1, -20, 103, -59, 13]
+
+ find Sualları
+
+ 1) "java" deyimini tapın
+ Array: ["java", "summer", "spring", "adelel", "fero", "imi", "ibo"]
+
+ 2) Length-i 6-ya bərabər olan dəyişəni tapın
+ Array: ["java", "summer", "spring", "adelel", "fero", "imi", "ibo"]
+
+ some və every Sualları
+
+ 1) Array-də hər hansı bir string var?
+ Array: [15, 49, "string", 3, 6, 62, "array", 12, 9, -4, "number", 58, 103]
+
+ 2) Bütün ədədlər müsbətdir?
+ Array: [15, 49, "string", 3, 6, 62, "array", 12, 9, -4, "number", 58, 103]
+
+ 3) Arraydə heç olmasa bir cüt ədəd varmı?
+ Array: [15, 49, "string", 3, 6, 62, "array", 12, 9, -4, "number", 58, 103]
+
+ 4) Arraydəki bütün stringlər uzunluğu 5-dən böyükdürmü?
+ Array: [15, 49, "string", 3, 6, 62, "array", 12, 9, -4, "number", 58, 103]
+
+ 5) Arraydə heç olmasa bir mənfi ədəd varmı?
+ Array: [15, 49, "string", 3, 6, 62, "array", 12, 9, -4, "number", 58, 103]
+
+ 6) Arraydəki bütün elementlər ya string, ya da rəqəm olmalıdırmı?
+ Array: [15, 49, "string", 3, 6, 62, "array", 12, 9, -4, "number", 58, 103]
+
+ 7) Arraydə heç olmasa bir ədəd 100-dən böyükdürmü?
+ Array: [15, 49, "string", 3, 6, 62, "array", 12, 9, -4, "number", 58, 103]
+
+ 8) Bütün ədədlər təkdirmi?
+ Array: [15, 49, "string", 3, 6, 62, "array", 12, 9, -4, "number", 58, 103]

@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="az">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>JavaScript Taskları</title>
+  </head>
+  <body>
+    <h1>JavaScript Taskları</h1>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Task və Array</th>
+          <th>Kod</th>
+          <th>Nəticə</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- forEach Sualları -->
+        <tr>
+          <td data-label="Task və Array">
+            forEach: Bütün dəyişənləri ekrana yazdırın <br /><strong
+              >Array:</strong
+            >
+            [15, 49, "string", 3, 6, 62, "array", 12, 9, -4, "number", 58, 103]
+          </td>
+          <td data-label="Kod">
+            <button onclick="toggleCode(1)">Kodu Göstər</button>
+            <div id="code1" class="code-block">
+              <pre><code>
+arr.forEach(item => console.log(item));
+            </code></pre>
+            </div>
+          </td>
+          <td data-label="Nəticə">
+            <div id="result1" class="result-block"></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td data-label="Task və Array">
+            forEach: Bütün sayları topla və ekrana yazdır <br /><strong
+              >Array:</strong
+            >
+            [15, 49, "string", 3, 6, 62, "array", 12, 9, -4, "number", 58, 103]
+          </td>
+          <td data-label="Kod">
+            <button onclick="toggleCode(2)">Kodu Göstər</button>
+            <div id="code2" class="code-block">
+              <pre><code>
+let sum = 0;
+arr.forEach(item => {
+  if (typeof item === 'number') {
+    sum += item;
+  }
+});
+console.log('Sum of all numbers:', sum);
+            </code></pre>
+            </div>
+          </td>
+          <td data-label="Nəticə">
+            <div id="result2" class="result-block"></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td data-label="Task və Array">
+            forEach: Bütün stringləri böyük hərfə çevirin <br /><strong
+              >Array:</strong
+            >
+            [15, 49, "string", 3, 6, 62, "array", 12, 9, -4, "number", 58, 103]
+          </td>
+          <td data-label="Kod">
+            <button onclick="toggleCode(3)">Kodu Göstər</button>
+            <div id="code3" class="code-block">
+              <pre><code>
+let upperStrings = [];
+arr.forEach(item => {
+  if (typeof item === 'string') {
+    upperStrings.push(item.toUpperCase());
+  }
+});
+console.log('Uppercase strings:', upperStrings);
+            </code></pre>
+            </div>
+          </td>
+          <td data-label="Nəticə">
+            <div id="result3" class="result-block"></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td data-label="Task və Array">
+            forEach: Bütün müsbət ədədləri tap və ekrana yazdır <br /><strong
+              >Array:</strong
+            >
+            [15, 49, "string", 3, 6, 62, "array", 12, 9, -4, "number", 58, 103]
+          </td>
+          <td data-label="Kod">
+            <button onclick="toggleCode(4)">Kodu Göstər</button>
+            <div id="code4" class="code-block">
+              <pre><code>
+arr.forEach(item => {
+  if (typeof item === 'number' && item > 0) {
+    console.log('Positive number:', item);
+  }
+});
+            </code></pre>
+            </div>
+          </td>
+          <td data-label="Nəticə">
+            <div id="result4" class="result-block"></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td data-label="Task və Array">
+            forEach: Array-i tərsinə çevirin (reverse istifadə etmədən)
+            <br /><strong>Array:</strong> [15, 49, "string", 3, 6, 62, "array",
+            12, 9, -4, "number", 58, 103]
+          </td>
+          <td data-label="Kod">
+            <button onclick="toggleCode(5)">Kodu Göstər</button>
+            <div id="code5" class="code-block">
+              <pre><code>
+let reversedArr = [];
+arr.forEach(item => {
+  reversedArr.unshift(item);
+});
+console.log('Reversed array:', reversedArr);
+            </code></pre>
+            </div>
+          </td>
+          <td data-label="Nəticə">
+            <div id="result5" class="result-block"></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td data-label="Task və Array">
+            forEach: Bütün cüt ədədləri ekrana yazdır <br /><strong
+              >Array:</strong
+            >
+            [15, 49, "string", 3, 6, 62, "array", 12, 9, -4, "number", 58, 103]
+          </td>
+          <td data-label="Kod">
+            <button onclick="toggleCode(6)">Kodu Göstər</button>
+            <div id="code6" class="code-block">
+              <pre><code>
+arr.forEach(item => {
+  if (typeof item === 'number' && item % 2 === 0) {
+    console.log('Even number:', item);
+  }
+});
+            </code></pre>
+            </div>
+          </td>
+          <td data-label="Nəticə">
+            <div id="result6" class="result-block"></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td data-label="Task və Array">
+            forEach: Bütün stringlərin uzunluğunu ekrana yazdır <br /><strong
+              >Array:</strong
+            >
+            [15, 49, "string", 3, 6, 62, "array", 12, 9, -4, "number", 58, 103]
+          </td>
+          <td data-label="Kod">
+            <button onclick="toggleCode(7)">Kodu Göstər</button>
+            <div id="code7" class="code-block">
+              <pre><code>
+arr.forEach(item => {
+  if (typeof item === 'string') {
+    console.log(`${item}-length: ${item.length}`);
+  }
+});
+            </code></pre>
+            </div>
+          </td>
+          <td data-label="Nəticə">
+            <div id="result7" class="result-block"></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td data-label="Task və Array">
+            forEach: Bütün rəqəmləri iki ilə vurub ekrana yazdırın <br /><strong
+              >Array:</strong
+            >
+            [15, 49, "string", 3, 6, 62, "array", 12, 9, -4, "number", 58, 103]
+          </td>
+          <td data-label="Kod">
+            <button onclick="toggleCode(8)">Kodu Göstər</button>
+            <div id="code8" class="code-block">
+              <pre><code>
+arr.forEach(item => {
+  if (typeof item === 'number') {
+    console.log('Multiplied by 2:', item * 2);
+  }
+});
+            </code></pre>
+            </div>
+          </td>
+          <td data-label="Nəticə">
+            <div id="result8" class="result-block"></div>
+          </td>
+        </tr>
+
+        <!-- Map Sualları -->
+        <tr>
+          <td data-label="Task və Array">
+            Map: Hər bir elementi iki misli olan yeni array yaradın
+            <br /><strong>Array:</strong> [4, 48, 13, 53, -29, 103]
+          </td>
+          <td data-label="Kod">
+            <button onclick="toggleCode(9)">Kodu Göstər</button>
+            <div id="code9" class="code-block">
+              <pre><code>
+let arr1 = [4, 48, 13, 53, -29, 103];
+let doubledArr = arr1.map(item => item * 2);
+console.log(doubledArr);
+            </code></pre>
+            </div>
+          </td>
+          <td data-label="Nəticə">
+            <div id="result9" class="result-block"></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td data-label="Task və Array">
+            Map: Hər bir elementi 100 ilə toplayan yeni array yaradın
+            <br /><strong>Array:</strong> [4, 48, 13, 53, -29, 103]
+          </td>
+          <td data-label="Kod">
+            <button onclick="toggleCode(10)">Kodu Göstər</button>
+            <div id="code10" class="code-block">
+              <pre><code>
+let addedHundred = arr1.map(item => item + 100);
+console.log(addedHundred);
+            </code></pre>
+            </div>
+          </td>
+          <td data-label="Nəticə">
+            <div id="result10" class="result-block"></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td data-label="Task və Array">
+            Map: Hər bir elementin ilk hərfini saxlayan array yaradın
+            <br /><strong>Array:</strong> ["apple", "banana", "orange",
+            "fexreddin", "niyameddin"]
+          </td>
+          <td data-label="Kod">
+            <button onclick="toggleCode(11)">Kodu Göstər</button>
+            <div id="code11" class="code-block">
+              <pre><code>
+let arr2 = ["apple", "banana", "orange", "fexreddin", "niyameddin"];
+let firstLetters = arr2.map(item => item[0]);
+console.log(firstLetters);
+            </code></pre>
+            </div>
+          </td>
+          <td data-label="Nəticə">
+            <div id="result11" class="result-block"></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td data-label="Task və Array">
+            Map: Hərfləri böyük edib uzunluğu ilə birlikdə qaytaran array
+            yaradın <br /><strong>Array:</strong> ["apple", "banana", "orange",
+            "fexreddin", "niyameddin"]
+          </td>
+          <td data-label="Kod">
+            <button onclick="toggleCode(12)">Kodu Göstər</button>
+            <div id="code12" class="code-block">
+              <pre><code>
+let capitalizedWithLength = arr2.map(item => [item.toUpperCase(), item.length]);
+console.log(capitalizedWithLength);
+            </code></pre>
+            </div>
+          </td>
+          <td data-label="Nəticə">
+            <div id="result12" class="result-block"></div>
+          </td>
+        </tr>
+
+        <!-- Filter Sualları -->
+        <tr>
+          <td data-label="Task və Array">
+            Filter: Bütün müsbət ədədləri qaytaran array yaradın <br /><strong
+              >Array:</strong
+            >
+            [15, 19, 23, 12, 4, 2, 49, 25, 1, -20, 103, -59, 13]
+          </td>
+          <td data-label="Kod">
+            <button onclick="toggleCode(13)">Kodu Göstər</button>
+            <div id="code13" class="code-block">
+              <pre><code>
+let arr6 = [15, 19, 23, 12, 4, 2, 49, 25, 1, -20, 103, -59, 13];
+let positiveArr = arr6.filter(item => item > 0);
+console.log(positiveArr);
+            </code></pre>
+            </div>
+          </td>
+          <td data-label="Nəticə">
+            <div id="result13" class="result-block"></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td data-label="Task və Array">
+            Filter: Bütün mənfi ədədləri qaytaran array yaradın <br /><strong
+              >Array:</strong
+            >
+            [15, 19, 23, 12, 4, 2, 49, 25, 1, -20, 103, -59, 13]
+          </td>
+          <td data-label="Kod">
+            <button onclick="toggleCode(14)">Kodu Göstər</button>
+            <div id="code14" class="code-block">
+              <pre><code>
+let negativeArr = arr6.filter(item => item < 0);
+console.log(negativeArr);
+            </code></pre>
+            </div>
+          </td>
+          <td data-label="Nəticə">
+            <div id="result14" class="result-block"></div>
+          </td>
+        </tr>
+
+        <!-- Find Sualları -->
+        <tr>
+          <td data-label="Task və Array">
+            Find: Array-də "java" deyimini tapın <br /><strong>Array:</strong>
+            ["java", "summer", "spring", "adelel", "fero", "imi", "ibo"]
+          </td>
+          <td data-label="Kod">
+            <button onclick="toggleCode(15)">Kodu Göstər</button>
+            <div id="code15" class="code-block">
+              <pre><code>
+let arr4 = ["java", "summer", "spring", "adelel", "fero", "imi", "ibo"];
+let foundJava = arr4.find(item => item === "java");
+console.log(foundJava);
+            </code></pre>
+            </div>
+          </td>
+          <td data-label="Nəticə">
+            <div id="result15" class="result-block"></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td data-label="Task və Array">
+            Find: Length-i 6 olan dəyişəni tapın <br /><strong>Array:</strong>
+            ["java", "summer", "spring", "adelel", "fero", "imi", "ibo"]
+          </td>
+          <td data-label="Kod">
+            <button onclick="toggleCode(16)">Kodu Göstər</button>
+            <div id="code16" class="code-block">
+              <pre><code>
+let foundLength6 = arr4.find(item => item.length === 6);
+console.log(foundLength6);
+            </code></pre>
+            </div>
+          </td>
+          <td data-label="Nəticə">
+            <div id="result16" class="result-block"></div>
+          </td>
+        </tr>
+
+        <!-- Some və Every Sualları -->
+        <tr>
+          <td data-label="Task və Array">
+            Some: Array-də hər hansı bir string varmı? <br /><strong
+              >Array:</strong
+            >
+            [15, 49, "string", 3, 6, 62, "array", 12, 9, -4, "number", 58, 103]
+          </td>
+          <td data-label="Kod">
+            <button onclick="toggleCode(17)">Kodu Göstər</button>
+            <div id="code17" class="code-block">
+              <pre><code>
+let hasString = arr.some(item => typeof item === 'string');
+console.log("Arraydə string var?", hasString);
+          </code></pre>
+            </div>
+          </td>
+          <td data-label="Nəticə">
+            <div id="result17" class="result-block"></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td data-label="Task və Array">
+            Every: Bütün ədədlər müsbətdirmi? <br /><strong>Array:</strong> [15,
+            49, "string", 3, 6, 62, "array", 12, 9, -4, "number", 58, 103]
+          </td>
+          <td data-label="Kod">
+            <button onclick="toggleCode(18)">Kodu Göstər</button>
+            <div id="code18" class="code-block">
+              <pre><code>
+let allPositiveNumbers = arr.every(item => typeof item === 'number' && item > 0);
+console.log("Bütün ədədlər müsbətdir?", allPositiveNumbers);
+          </code></pre>
+            </div>
+          </td>
+          <td data-label="Nəticə">
+            <div id="result18" class="result-block"></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td data-label="Task və Array">
+            Some: Array-də heç olmasa bir cüt ədəd varmı? <br /><strong
+              >Array:</strong
+            >
+            [15, 49, "string", 3, 6, 62, "array", 12, 9, -4, "number", 58, 103]
+          </td>
+          <td data-label="Kod">
+            <button onclick="toggleCode(19)">Kodu Göstər</button>
+            <div id="code19" class="code-block">
+              <pre><code>
+let hasEvenNumber = arr.some(item => typeof item === 'number' && item % 2 === 0);
+console.log("Arraydə cüt ədəd var?", hasEvenNumber);
+          </code></pre>
+            </div>
+          </td>
+          <td data-label="Nəticə">
+            <div id="result19" class="result-block"></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td data-label="Task və Array">
+            Every: Bütün stringlər uzunluğu 5-dən böyükdürmü? <br /><strong
+              >Array:</strong
+            >
+            [15, 49, "string", 3, 6, 62, "array", 12, 9, -4, "number", 58, 103]
+          </td>
+          <td data-label="Kod">
+            <button onclick="toggleCode(20)">Kodu Göstər</button>
+            <div id="code20" class="code-block">
+              <pre><code>
+let allStringsLongerThan5 = arr.every(item => typeof item === 'string' && item.length > 5);
+console.log("Bütün stringlər uzunluğu 5-dən böyükdür?", allStringsLongerThan5);
+          </code></pre>
+            </div>
+          </td>
+          <td data-label="Nəticə">
+            <div id="result20" class="result-block"></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td data-label="Task və Array">
+            Some: Array-də heç olmasa bir mənfi ədəd varmı? <br /><strong
+              >Array:</strong
+            >
+            [15, 49, "string", 3, 6, 62, "array", 12, 9, -4, "number", 58, 103]
+          </td>
+          <td data-label="Kod">
+            <button onclick="toggleCode(21)">Kodu Göstər</button>
+            <div id="code21" class="code-block">
+              <pre><code>
+let hasNegativeNumber = arr.some(item => typeof item === 'number' && item < 0);
+console.log("Arraydə mənfi ədəd var?", hasNegativeNumber);
+          </code></pre>
+            </div>
+          </td>
+          <td data-label="Nəticə">
+            <div id="result21" class="result-block"></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td data-label="Task və Array">
+            Every: Bütün elementlər ya string, ya da rəqəmdir? <br /><strong
+              >Array:</strong
+            >
+            [15, 49, "string", 3, 6, 62, "array", 12, 9, -4, "number", 58, 103]
+          </td>
+          <td data-label="Kod">
+            <button onclick="toggleCode(22)">Kodu Göstər</button>
+            <div id="code22" class="code-block">
+              <pre><code>
+let allAreStringOrNumber = arr.every(item => typeof item === 'string' || typeof item === 'number');
+console.log("Bütün elementlər ya string, ya da rəqəmdir?", allAreStringOrNumber);
+          </code></pre>
+            </div>
+          </td>
+          <td data-label="Nəticə">
+            <div id="result22" class="result-block"></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td data-label="Task və Array">
+            Some: Array-də 100-dən böyük ədəd varmı? <br /><strong
+              >Array:</strong
+            >
+            [15, 49, "string", 3, 6, 62, "array", 12, 9, -4, "number", 58, 103]
+          </td>
+          <td data-label="Kod">
+            <button onclick="toggleCode(23)">Kodu Göstər</button>
+            <div id="code23" class="code-block">
+              <pre><code>
+let hasNumberGreaterThan100 = arr.some(item => typeof item === 'number' && item > 100);
+console.log("Arraydə 100-dən böyük ədəd var?", hasNumberGreaterThan100);
+          </code></pre>
+            </div>
+          </td>
+          <td data-label="Nəticə">
+            <div id="result23" class="result-block"></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td data-label="Task və Array">
+            Every: Bütün ədədlər tək ədəddirmi? <br /><strong>Array:</strong>
+            [15, 49, "string", 3, 6, 62, "array", 12, 9, -4, "number", 58, 103]
+          </td>
+          <td data-label="Kod">
+            <button onclick="toggleCode(24)">Kodu Göstər</button>
+            <div id="code24" class="code-block">
+              <pre><code>
+let allOddNumbers = arr.every(item => typeof item === 'number' && item % 2 !== 0);
+console.log("Bütün ədədlər təkdir?", allOddNumbers);
+          </code></pre>
+            </div>
+          </td>
+          <td data-label="Nəticə">
+            <div id="result24" class="result-block"></div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <script src="app.js"></script>
+  </body>
+</html>
